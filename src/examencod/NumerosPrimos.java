@@ -14,56 +14,56 @@ public class NumerosPrimos {
     //LIstar los numeros según el numero de digitos indicado
     //Considero solo hasta numeros menores a 100000 (5 digitos), 
     //por el hecho de k buscar numeros primos a partir de 6 digitos, el proceso se hace muy lento.
-    public static boolean p = false;
+    public static boolean pregunta = false;
 
     public static void main(String arg[]) {
-        int nD = 0;
-        int nd = 0;
-        nD = Integer.parseInt(arg[0]);
-        if (nD <= 0) {
+        int numDigt1 = 0;
+        int numDigit2 = 0;
+        numDigt1 = Integer.parseInt(arg[0]);
+        if (numDigt1 <= 0) {
             System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
         }
-        for (int i = 1; i <= 99999; i++) {
-            int div = i;
-            int c = 0;
+        for (int contador = 1; contador <= 99999; contador++) {
+            int div = contador;
+            int edad = 0;
 
             while (div != 0) {
                 div = div / 10;
-                c++;
+                edad++;
             }
-            nd = c;
+            numDigit2 = edad;
 
-            if (nd == nD) {
-                if (i < 4) {
-                    p = true;
+            if (numDigit2 == numDigt1) {
+                if (contador < 4) {
+                    pregunta = true;
                 } else {
-                    if (i % 2 == 0) {
-                        p = false;
+                    if (contador % 2 == 0) {
+                        pregunta = false;
                     } else {
-                        int c1 = 0;
-                        int i1 = 1;
-                        int l = (i - 1) / 2;
-                        if (l % 2 == 0) {
-                            l--;
+                        int altura = 0;
+                        int peso = 1;
+                        int nota = (contador - 1) / 2;
+                        if (nota % 2 == 0) {
+                            nota--;
                         }
-                        while (i1 <= l) {
-                            if (i % i1 == 0) {
-                                c1++;
+                        while (peso <= nota) {
+                            if (contador % peso == 0) {
+                                altura++;
                             }
-                            i1 += 2;
-                            if (c1 == 2) {
-                                i1 = l + 1;
+                            peso += 2;
+                            if (altura == 2) {
+                                peso = nota + 1;
                             }
                         }
 
-                        if (c1 == 1) {
-                            p = true;
+                        if (altura == 1) {
+                            pregunta = true;
                         }
                     }
                 }
 
-                if (p == true) {
-                    System.out.println(i);
+                if (pregunta == true) {
+                    System.out.println(contador);
                 }
             }
         }
