@@ -17,6 +17,11 @@ public class ExamenCOD {
     public static void main(String[] args) {
         /*
         1º Lo primero que hago es usar format en numeros para ordenarlo todo. 
+        2º Hago lo mismo con lovivido.
+        3º Y otra vez con factorial.
+        4º Luego utilizo el rename dentro de refactor en numeros para cambiar el nombre a la vez de algo en todos los lugares donde se encuenta.
+        5º Hago lo mismo con lovivido.
+        6º Y otra vez con factorial.
         
         
         
